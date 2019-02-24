@@ -2,3 +2,33 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+h1,h4{
+  text-align: center;
+}
+
+.imagen-inicio{
+  height: 56px;
+  width: 56px;
+  border-radius: 50%
+}
+.contenedor-nombre{
+  margin: 0px 10px 0px 10px;
+}
+
+.card-content-md{
+    -webkit-padding-start: 0px; 
+    padding-inline-start: 0px; 
+    -webkit-padding-end: 0px; 
+    padding-inline-end: 0px; 
+}
+.horario-inicio{
+  font-size: 12px!important;
+  margin-top: -5px;
+}
+.nombre-turno-inicio{
+  margin-bottom: 0;
+}
+.OcultarContent{
+  display: none;
+}

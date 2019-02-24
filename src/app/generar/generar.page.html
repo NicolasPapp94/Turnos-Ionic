@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Turnos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card [ngClass]="{OcultarContent: session_iniciada==false}">
+    <ion-card-header>
+      <ion-card-title>Generar turno</ion-card-title>
+    </ion-card-header>  
+    <ion-card-content>
+        <form (ngSubmit)="logForm()" id="FormularioTurno">
+          <ion-list>
+              <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+                <ion-input [(ngModel)]="data.nombre"  [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">Apellido</ion-label>
+                  <ion-input [(ngModel)]="data.apellido" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">Telefono</ion-label>
+                  <ion-input type="tele" [(ngModel)]="data.telefono" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Dia</ion-label>
+                <ion-datetime [(ngModel)]="data.fecha_inicio"  [ngModelOptions]="{standalone: true}" display-format="D / M / YYYY"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Hora</ion-label>
+                <ion-datetime [(ngModel)]="data.hora_inicio"  [ngModelOptions]="{standalone: true}" display-format="HH : mm"></ion-datetime>
+              </ion-item>
+            </ion-list>
+            <ion-button type="submit" expand="full" color="success">Generar turno</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+    
+</ion-content>

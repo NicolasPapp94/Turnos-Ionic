@@ -4,24 +4,24 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Turnos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <ion-card [ngClass]="{OcultarContent: session_iniciada==false}">
+      <ion-card-content>
+        <ion-list>
+            <ion-item *ngFor="let item of server">
+              <ion-label>
+                <h5>{{item.nombre}} {{item.apellido}}</h5>
+                <p class="horario-inicio">{{item.fecha_turno}} - {{item.hora_turno}}</p>
+              </ion-label>
+              <ion-button item-end color="danger" (click)="EliminarTurno(item.pkturno)"><ion-icon slot="icon-only" name="trash"></ion-icon></ion-button>
+            </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
 </ion-content>

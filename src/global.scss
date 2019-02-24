@@ -9,3 +9,72 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+* {
+font-family: 'Titillium Web';
+}
+
+.modal-wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.MenuImagenPerfil{
+    height: 75px;
+    width: 75px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.MenuNombrePerfil{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.BotonIniciarSesion{
+    display: block;
+    margin: 0 auto;
+    margin-block-start: 5px!important;
+    width: 50%;
+    padding-top: 10px; 
+}
+.alert-input-group.sc-ion-alert-md, .alert-message.sc-ion-alert-md {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.MenuFondo{
+    background-image: linear-gradient(#ffffff,#343434);
+}
+
+.MenuBotones{
+    background-color: #fff0f000!important;
+
+}
+.OcultarPerfil{
+    display: none!important;
+}
+.OcultarSinPerfil{
+    display: none!important;
+}
+.Perfil{
+    height: 150px!important;
+    margin-block-end: 5px;
+}
+.SinPerfil{
+    height: 120px!important;
+    margin-block-end: 5px;
+}
+.MenuImagenSinPerfil{
+    height: 75px;
+    width: 75px;
+    margin: 0 auto;
+    display: block;
+}

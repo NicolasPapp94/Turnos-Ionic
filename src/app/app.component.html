@@ -2,12 +2,20 @@
   <ion-split-pane>
     <ion-menu>
       <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
+        <div class="Perfil" [ngClass]="{OcultarPerfil: session_iniciada==false}"> 
+          <img class="MenuImagenPerfil" src={{session.imagen}}>
+          <h4 class="MenuNombrePerfil"> {{session.nombre}} </h4>
+          <ion-button color="secondary" class="BotonIniciarSesion" (click)="CerrarSesion()">CERRAR SESION</ion-button>
+        </div>
+        <div class="SinPerfil" [ngClass]="{OcultarSinPerfil: session_iniciada==true}"> 
+          <img class="MenuImagenSinPerfil" src="assets/avatar.png">
+          <ion-menu-toggle auto-hide="false">
+            <ion-button color="secondary" class="BotonIniciarSesion" (click)="IniciarSesionManual()">INICIAR SESION</ion-button>
+          </ion-menu-toggle>
+        </div>
       </ion-header>
       <ion-content>
-        <ion-list>
+        <ion-list [ngClass]="{OcultarPerfil: session_iniciada==false}">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
